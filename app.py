@@ -1,4 +1,4 @@
-from flask import flask, render_template, request
+from flask import Flask, render_template, request
 import os
 import cv2
 from rice_detector import detect_rice
