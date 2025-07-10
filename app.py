@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from Flask import Flask, render_template, request
 import os
 import cv2
 from rice_detector import detect_rice
@@ -24,5 +24,9 @@ def upload():
                            broken=count_broken, 
                            whole=count_whole)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if _name_ == '_main_':
+    # Get the port from Render.com environment
+    port = int(os.environ.get("PORT", 5000))
+
+    # Run Flask on 0.0.0.0 and dynamic port
+    app.run(debug=True, host='0.0.0.0', port=port)
