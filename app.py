@@ -24,7 +24,7 @@ def upload():
                            broken=count_broken, 
                            whole=count_whole)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     # Get the port from Render.com environment
     port = int(os.environ.get("PORT", 5000))
 
